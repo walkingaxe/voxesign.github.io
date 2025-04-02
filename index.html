@@ -1,1 +1,158 @@
-<div class="sketchfab-embed-wrapper"> <iframe title="Meraxes Gigas" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="1920" height="1080" src="https://sketchfab.com/models/5c9fd0106b8645e5a0ebac39a81c7c27/embed"> </iframe> </div>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数字恐龙博物馆 - Meraxes Gigas</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .main-title {
+            text-align: center;
+            margin: 30px 0;
+            color: #2c3e50;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .model-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 比例 */
+            background: #000;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+
+        .model-iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .info-panel {
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 30px;
+        }
+
+        .model-description {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .specs-box {
+            background: #2c3e50;
+            color: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        h2 {
+            color: #3498db;
+            margin-bottom: 15px;
+            font-size: 1.8em;
+        }
+
+        p {
+            line-height: 1.8;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .specs-item {
+            margin: 15px 0;
+            padding: 10px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .info-panel {
+                grid-template-columns: 1fr;
+            }
+            
+            .main-title {
+                font-size: 2em;
+            }
+            
+            .container {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="main-title">数字恐龙博物馆 - Meraxes Gigas</h1>
+        
+        <div class="model-container">
+            <iframe 
+                class="model-iframe"
+                title="Meraxes Gigas" 
+                allowfullscreen
+                mozallowfullscreen="true" 
+                webkitallowfullscreen="true"
+                allow="autoplay; fullscreen; xr-spatial-tracking" 
+                xr-spatial-tracking 
+                execution-while-out-of-viewport 
+                execution-while-not-rendered 
+                web-share 
+                src="https://sketchfab.com/models/5c9fd0106b8645e5a0ebac39a81c7c27/embed">
+            </iframe>
+        </div>
+
+        <div class="info-panel">
+            <div class="model-description">
+                <h2>发现与命名</h2>
+                <p>Meraxes gigas 是近年来在阿根廷巴塔哥尼亚地区发现的大型肉食性恐龙。该物种的命名灵感来源于《冰与火之歌》中的传奇巨龙，其完整度达70%的化石为研究巨型兽脚类恐龙的演化提供了重要依据。</p>
+                
+                <h2>形态特征</h2>
+                <p>这种巨型掠食者体长可达11米，颅骨装饰有独特冠饰和沟槽结构。前肢相对短小但肌肉发达，后肢强壮适合高速奔跑，尾部特殊的骨骼结构为快速转向提供支撑。</p>
+            </div>
+
+            <div class="specs-box">
+                <h2>生物学特征</h2>
+                <div class="specs-item">
+                    <strong>生存年代：</strong>白垩纪晚期（约9500万年前）
+                </div>
+                <div class="specs-item">
+                    <strong>发现地点：</strong>阿根廷巴塔哥尼亚
+                </div>
+                <div class="specs-item">
+                    <strong>体长：</strong>10-11米
+                </div>
+                <div class="specs-item">
+                    <strong>体重：</strong>4-5吨
+                </div>
+                <div class="specs-item">
+                    <strong>分类：</strong>兽脚亚目 > 鲨齿龙科
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
