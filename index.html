@@ -9,35 +9,47 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Arial, sans-serif;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
         }
 
         body {
-            background-color: #f5f5f5;
+            background: #0a0a0a;
+            color: #e0e0e0;
+            line-height: 1.6;
         }
 
         .container {
             max-width: 1600px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 2rem;
         }
 
         .main-title {
             text-align: center;
-            margin: 30px 0;
-            color: #2c3e50;
-            font-size: 2.5em;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            margin: 3rem 0;
+            font-size: 2.8rem;
+            font-weight: 600;
+            background: linear-gradient(45deg, #00ff88, #00d4ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: -0.05em;
         }
 
         .model-container {
             position: relative;
             width: 100%;
-            padding-bottom: 56.25%; /* 16:9 比例 */
-            background: #000;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            padding-bottom: 56.25%;
+            background: #111;
+            border-radius: 1rem;
             overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.1);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .model-container:hover {
+            transform: translateY(-4px);
         }
 
         .model-iframe {
@@ -50,64 +62,97 @@
         }
 
         .info-panel {
-            margin-top: 30px;
+            margin-top: 2.5rem;
             display: grid;
             grid-template-columns: 1fr 300px;
-            gap: 30px;
+            gap: 2rem;
         }
 
         .model-description {
-            background: white;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            background: #151515;
+            padding: 2rem;
+            border-radius: 1rem;
+            border: 1px solid rgba(255,255,255,0.08);
         }
 
         .specs-box {
-            background: #2c3e50;
-            color: white;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            background: linear-gradient(145deg, #1a1a1a, #151515);
+            padding: 2rem;
+            border-radius: 1rem;
+            border: 1px solid rgba(0, 208, 255, 0.15);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.4);
         }
 
         h2 {
-            color: #3498db;
-            margin-bottom: 15px;
-            font-size: 1.8em;
+            color: #00d4ff;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+            font-weight: 600;
+            position: relative;
+            padding-left: 1rem;
+        }
+
+        h2::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 70%;
+            background: linear-gradient(180deg, #00ff88, #00d4ff);
+            border-radius: 2px;
         }
 
         p {
-            line-height: 1.8;
-            color: #666;
-            margin-bottom: 15px;
+            color: #b0b0b0;
+            margin-bottom: 1.2rem;
+            font-size: 0.95rem;
         }
 
         .specs-item {
-            margin: 15px 0;
-            padding: 10px;
-            background: rgba(255,255,255,0.1);
+            margin: 1rem 0;
+            padding: 1rem;
+            background: rgba(255,255,255,0.03);
             border-radius: 8px;
+            border-left: 3px solid #00ff88;
+            transition: all 0.3s ease;
+        }
+
+        .specs-item:hover {
+            background: rgba(0, 212, 255, 0.05);
+            transform: translateX(8px);
+        }
+
+        .specs-item strong {
+            color: #00d4ff;
+            font-weight: 500;
         }
 
         @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            .main-title {
+                font-size: 2rem;
+                margin: 2rem 0;
+            }
+            
             .info-panel {
                 grid-template-columns: 1fr;
             }
             
-            .main-title {
-                font-size: 2em;
-            }
-            
-            .container {
-                padding: 10px;
+            .model-description,
+            .specs-box {
+                padding: 1.5rem;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1 class="main-title">数字恐龙博物馆 - Meraxes Gigas</h1>
+        <h1 class="main-title">Meraxes Gigas 数字展馆</h1>
         
         <div class="model-container">
             <iframe 
@@ -127,29 +172,30 @@
 
         <div class="info-panel">
             <div class="model-description">
-                <h2>发现与命名</h2>
-                <p>Meraxes gigas 是近年来在阿根廷巴塔哥尼亚地区发现的大型肉食性恐龙。该物种的命名灵感来源于《冰与火之歌》中的传奇巨龙，其完整度达70%的化石为研究巨型兽脚类恐龙的演化提供了重要依据。</p>
+                <h2>物种档案</h2>
+                <p>这种神秘的巨型掠食者展现出独特的演化特征，其保存完好的前肢结构为研究兽脚类恐龙的前肢退化理论提供了关键证据。最新研究表明，Meraxes gigas 可能采用独特的伏击捕猎策略。</p>
                 
-                <h2>形态特征</h2>
-                <p>这种巨型掠食者体长可达11米，颅骨装饰有独特冠饰和沟槽结构。前肢相对短小但肌肉发达，后肢强壮适合高速奔跑，尾部特殊的骨骼结构为快速转向提供支撑。</p>
+                <h2>形态解析</h2>
+                <p>颅骨表面复杂的神经血管沟暗示其可能具有敏感的触觉感知系统，独特的眶前孔结构可能支撑特殊的感觉器官。耻骨末端的扩张形态表明其具有强大的腹部肌肉群。</p>
             </div>
 
             <div class="specs-box">
-                <h2>生物学特征</h2>
+                <h2>生物特征</h2>
                 <div class="specs-item">
-                    <strong>生存年代：</strong>白垩纪晚期（约9500万年前）
+                    <strong>生存年代</strong><br>
+                    白垩纪塞诺曼期 (96-93 Mya)
                 </div>
                 <div class="specs-item">
-                    <strong>发现地点：</strong>阿根廷巴塔哥尼亚
+                    <strong>发现地层</strong><br>
+                    Huincul 地层 (阿根廷内乌肯盆地)
                 </div>
                 <div class="specs-item">
-                    <strong>体长：</strong>10-11米
+                    <strong>骨骼特征</strong><br>
+                    84件保存完整的骨骼标本
                 </div>
                 <div class="specs-item">
-                    <strong>体重：</strong>4-5吨
-                </div>
-                <div class="specs-item">
-                    <strong>分类：</strong>兽脚亚目 > 鲨齿龙科
+                    <strong>运动模式</strong><br>
+                    最大时速可达45 km/h
                 </div>
             </div>
         </div>
